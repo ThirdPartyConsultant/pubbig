@@ -1,0 +1,942 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+			 	      
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/page3_01.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<script type="text/javascript" src="/js/ajax_legislator.js"></script>
+<script>
+function ClearValue(form){
+	document.getElementById("searchValues[0]").value="";
+	var sv1=document.getElementById("searchValues[1]");
+	sv1.selectedIndex=0;
+
+	document.getElementById("searchValues[5]").selectedIndex=0;
+	document.getElementsByName("searchValues[6]")[0].checked=true;
+	
+	ajaxArea(sv1.value,'null');
+	ajaxParty(sv1.value,'null');
+	ajaxPartyGroup(sv1.value,'null');
+}
+</script>
+		
+
+
+
+
+
+
+<script type="text/javascript" src="../../flash-fix.js"></script>
+<link href="../../css/spring/css999.css" rel="stylesheet" type="text/css" />
+<link href="../../css/index_background.css" rel="stylesheet" type="text/css" />
+<link href="../../css/spring/index_txt_s.css" rel="stylesheet" type="text/css" />
+<link href="../../css/spring/leftmenu_mainflasharea.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" title="medium" cat="font" href="../../css/spring/font_m.css"> <!--第一次載入頁面的字型-->
+<link rel="alternate stylesheet" type="text/css" title="small" cat="font" href="../../css/spring/font_s.css"> <!--"小"的字型-->
+<link rel="alternate stylesheet" type="text/css" title="large" cat="font" href="../../css/spring/font_l.css"> <!--"大"的字型-->
+<styleSwitcher cat="font" />
+<meta name="author" content="立法院全球資訊網";>
+<meta name="copyright" content="立法院全球資訊網";>
+<meta http-equiv="keywords" content="立法院,立法委員,立委,立委名單">
+<meta http-equiv="description" content="立法院歷屆委員名單查詢，提供依屆別、選區、黨籍和黨團等查詢條件來進行資料查閱及相關統計報表">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Accessible_website" content="本網站通過第2優先等級無障礙網頁檢測">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>立法院全球資訊網－立法委員－委員名單</title>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<body>
+<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td colspan="2" align="right" valign="bottom">	
+		 
+	
+       <div class="top_left">
+       <a href="../../index.jsp">
+       <img src="../../images/logo.gif" alt="立法院全球資訊網" width="333" height="72" border="0" /></a></div>
+<!--<div id="flashcontent1"></div>
+                  <script type="text/javascript">
+                     var fo = new FlashObject("../../images/logo.swf", "mymovie", "333", "72", "6,0,0,0", "");
+                     fo.write("flashcontent1");
+                     fo.addVariable("variable", "varvalue");
+                   </script>-->
+		
+		
+<div id="top_right">
+			     <div class="txt_white01" align="right">
+			     <a href="#" title="上方導覽連結區域" accesskey="U">:::</a>
+			     </div>
+				 <span class="top_right"><a href="../../en/index.jsp">English</a>│<a href="../../jp/index.jsp">日本語</a>│<a href="../../sp/index.jsp">Espanol</a>│<a href="../../pda/index.jsp">Mobile</a></span><span class="top_right"><a href="../../14_others/sitemap.jsp">網站導覽</a>│<a href="../../innerIndex.action">回首頁</a>│<a href="../../09_opinion/webSuggestAdd.action">網站技術建言</a>│<a href="../../04_affair/0407_answer/answerList.action">常見問答</a>│<a href="../../04_affair/0406_bilingual/gov06.jsp">雙語詞彙</a>│<a href="../../01_lyinfo/0111_rss/rss01.jsp">RSS</a></span></div>				 
+          </td>
+        </tr>
+        <tr>
+          <td width="1%" valign="top">
+
+
+
+
+
+
+ 
+
+
+
+
+<table width="1%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="menubg_top"><div class="summer_ink_blue"><a href="#" title="左邊選單" accesskey="L">:::</a></div></td>
+          </tr>
+  <tr>
+    <td background="../../images/spring/dep/menubg_middle.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+		<div class="txt_99"  style=" color:#FFFFFF" align="center">2014年04月15日星期二</div>
+		
+		<div id="id_1" class="menu01link"><img src="../../images/spring/dep/icon_menu01.gif" alt="*" width="16" height="16" class="icon_menu01"><span><a title="院內資訊" href="../../01_lyinfo/0101_lynews/lynewsList.action" target="_self">院內資訊</a></span></div>
+		   	   
+		
+		
+		<div id="id_1" class="menu01link"><img src="../../images/spring/dep/icon_menu01.gif" alt="*" width="16" height="16" class="icon_menu01"><span><a title="認識立法院" href="../../02_introduce/introduce01.jsp" target="_self">認識立法院</a></span></div>
+		   	   
+		
+          <div id="id_top"></div>
+          <div id="id_middle" class="menu01link"><img src="../../images/spring/dep/icon_menu01.gif" alt="*" width="16" height="16" class="icon_menu01" />立法委員
+            <div class="menu02link"><a title="歷屆委員查詢" href="../../03_leg/0301_main/legList.action"><img src="../../images/spring/dep/iecool_arrow_087.gif" alt="*" width="12" height="11" border="0" align="absmiddle" />歷屆委員查詢</a></div>
+          </div>
+          <div id="id_down"></div>
+ 		   	   
+
+		
+		<div id="id_1" class="menu01link"><img src="../../images/spring/dep/icon_menu01.gif" alt="*" width="16" height="16" class="icon_menu01"><a title="業務資訊" href="../../04_affair/business.jsp" target="_self">業務資訊</a></div>
+		 
+        <td align="right" valign="top" class="menubg_right">&nbsp;</td>
+      </tr>
+
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="../../images/spring/dep/menubg_down.gif" alt="" width="190" height="27" /></td>
+  </tr>
+</table>
+
+		
+
+			
+		
+		
+
+		
+
+ 		
+
+				
+		
+		
+</td>
+          <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" summary="排版用表格">
+              <tbody>
+                <tr>
+                  <td valign="top">
+
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<form method="post" name="form_tornado_search" action="http://w2.ly.gov.tw/search_result.jsp"  target="_blank">
+		<input type="hidden" name="DB" value="chall">
+          <tr>
+            <td width="1%" valign="top"><img src="../../images/spring/dep/index_r3_c7.gif" alt="排版用底圖" width="29" height="41" /></td>
+            <td width="98%" nowrap="nowrap" class="stylechoose">
+            
+            <div align="right" class="txt_white01"> 
+                <span><a href="#" title="中間全文檢索及版面設定區域" accesskey="T">:::</a></span>
+                <span>背景：</span>
+               	  <input type="hidden" name="layout_back" />	
+				  <img src="../../images/color_blue.gif" width="20" height="19" border="0" align="middle" alt="藍色" 
+					   onclick="document.form_tornado_search.layout_back.value=2;document.form_tornado_search.action='/innerIndex.action';document.form_tornado_search.target='_self';document.form_tornado_search.submit();"
+					   onkeypress="document.form_tornado_search.layout_back.value=2;document.form_tornado_search.action='/innerIndex.action';document.form_tornado_search.target='_self';document.form_tornado_search.submit();"
+				 	   onmouseover="style.cursor='hand';"
+				       onfocus="style.cursor='hand';"/> 
+                  <img src="../../images/color_green.gif" width="20" height="19" border="0" align="middle" alt="綠色"
+					   onclick="document.form_tornado_search.layout_back.value=1;document.form_tornado_search.action='/innerIndex.action';document.form_tornado_search.target='_self';document.form_tornado_search.submit();"
+					   onkeypress="document.form_tornado_search.layout_back.value=1;document.form_tornado_search.action='/innerIndex.action';document.form_tornado_search.target='_self';document.form_tornado_search.submit();"
+				 	   onmouseover="style.cursor='hand';"
+				       onfocus="style.cursor='hand';"/>                   
+                  <img src="../../images/color_red.gif" width="20" height="19" border="0" align="middle" alt="紅色"
+					   onclick="document.form_tornado_search.layout_back.value=8;document.form_tornado_search.action='/innerIndex.action';document.form_tornado_search.target='_self';document.form_tornado_search.submit();"
+					   onkeypress="document.form_tornado_search.layout_back.value=8;document.form_tornado_search.action='/innerIndex.action';document.form_tornado_search.target='_self';document.form_tornado_search.submit();"
+				 	   onmouseover="style.cursor='hand';"
+				       onfocus="style.cursor='hand';"/>                    				 
+                <span>字級：</span>
+				  <a id="small" cat="font" href="#" onclick="setActiveStyleSheet('small', 'font'); return false;" onkeypress="setActiveStyleSheet('small', 'font'); return false;">
+				  <img src="../../images/fontsize_s.gif" name="smallP" border="0" align="middle" id="smallP" alt="小" /></a>
+                  <a id="medium" cat="font" href="#" onclick="setActiveStyleSheet('medium', 'font'); return false;" onkeypress="setActiveStyleSheet('medium', 'font'); return false;">
+				  <img src="../../images/fontsize_m_.gif" name="mediumP" border="0" align="middle" id="mediumP" alt="中" /></a>
+                  <a id="large" cat="font" href="#" onclick="setActiveStyleSheet('large', 'font'); return false;" onkeypress="setActiveStyleSheet('large', 'font'); return false;">
+				  <img src="../../images/fontsize_b.gif" name="largeP" border="0" align="middle" id="largeP" alt="大" /></a>				  
+				  <label for="KW_F">全文檢索</label>                  
+				  <input name="KW_F" type="text" class="input_style"  id="KW_F" value="請輸入文字" onblur="if (this.value == '') {this.value = '請輸入文字';}" onfocus="if (this.value == '請輸入文字') {this.value = '';}" size="11" />
+                  <input name="search" type="submit" class="btn_style" id="search" value="查詢" />				  
+                  <a href="http://w2.ly.gov.tw/search.jsp" target="_blank">進階查詢</a>           
+            </div>            
+            </td>
+            <td width="1%" valign="top"><img src="../../images/spring/dep/index_r3_c12.gif" alt="排版用底圖" width="28" height="41" /></td>
+          </tr> </form>
+        </table>
+        
+      
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" summary="排版表格">
+         
+            <tr> 
+            <td width="1%" align="left"><img src="../../images/main_image/dep/flash_03.jpg" alt="動畫圖示" width="28" height="115"/></td><td width="98%" align="center" background="../../images/main_image/dep/flash_bg.jpg"><div id="flashcontent"></div><script type="text/javascript">  var fo = new FlashObject("../../images/main_image/dep/flash.swf", "mymovie", "571", "115", "6,0,0,0", "");  fo.write("flashcontent");  fo.addVariable("variable", "varvalue");</script></td><td width="1%" align="right"><img src="../../images/main_image/dep/flash02_g.jpg" alt="動畫圖示" width="28" height="115"/></td>
+
+             </tr>
+        </table>
+             
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" summary="排版表格">
+            <tr class="middlemenu">
+              <td width="1%" valign="top" >
+              <img src="../../images/spring/dep/index_r3_c13.gif" alt="排版用底圖" width="16" height="35" /></td>
+              <td width="99%">
+              
+              <img src="../../images/gray_icon_peo.gif" alt="民意交流" width="34" height="35" align="absmiddle" />
+              <a href="../../09_opinion/list.jsp">民意交流</a>
+              <img src="../../images/gray_icon_line.gif" alt="排版用分隔線" width="8" height="34" align="absmiddle" />
+              <img src="../../images/gray_icon_ser.gif" alt="便民服務" width="34" height="35" align="absmiddle" />
+              <a href="../../10_service/service.jsp">便民服務</a>
+              <img src="../../images/gray_icon_line.gif" alt="排版用分隔線" width="8" height="34" align="absmiddle" />
+              <img src="../../images/gray_icon_mv.gif" alt="影音專區" width="34" height="35" align="absmiddle" />
+              <a href="../../11_media/list.jsp">影音專區</a>
+              <img src="../../images/gray_icon_line.gif" alt="排版用分隔線" width="8" height="34" align="absmiddle" />
+              <img src="../../images/gray_icon_pub.gif" alt="出版品服務" width="34" height="35" align="absmiddle" />
+              <!-- <a href="../../04_affair/0402_public/ly_public.jsp">出版品服務</a>-->
+               <a href="../../04_affair/0402_public/lyPublic_new.action?type=06">出版品服務</a> 
+              <img src="../../images/gray_icon_line.gif" alt="排版用分隔線" width="8" height="34" align="absmiddle" />
+              <img src="../../images/gray_icon_el.gif" alt="數位簽章專區" width="34" height="35" align="absmiddle" />
+              <a href="../../14_others/digital_list.jsp">數位簽章專區</a>
+              
+              </td>
+              <td width="0%" align="right" valign="top"><img src="../../images/w_bg.gif" alt="排版用底圖" width="5" height="35" /></td>
+            </tr>
+          </table>          </td>
+                  <td width="1%" valign="top">
+
+
+
+
+
+
+
+
+
+<head>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script src="/js/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" src="/js/jquery.cycle.js"></script>
+<script type="text/javascript">
+ jQuery(document).ready(function($) {   
+$('#slider').cycle({   
+          fx:    'fade',  
+          timeout:  30000,
+          random:  1
+         });
+ }); </script>
+<style>
+	#slider div {
+	width: 165px;
+	height: 120px;
+	float: left;
+	overflow: hidden;
+	background: 0px 0px;
+/*
+	max-height:160px;
+	height:expression(this.Height>160?\"160px\":\"this.Height\");
+	overflow:hidden;
+*/	}
+</style>
+</head>
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="main_b">
+  <tr>
+    <td valign="bottom">
+		<div class="pring"><a href="#" title="右側相關連結區" accesskey="R">:::</a></div>
+			<form name="layout_form" action="/innerIndex.action" method="post">
+            <input type="hidden" name="layout" />
+			<a href="#" onclick="document.layout_form.layout.value=0;document.layout_form.submit();"
+					    onkeypress="document.layout_form.layout.value=0;document.layout_form.submit();">
+			<img src="../../images/guide_g.gif" alt="分眾導覽_一般" width="38" height="33" border="0" />
+			</a>
+			<a href="../../innerIndex.action?v=media">			
+			<img src="../../images/guide_m.gif" alt="分眾導覽_影音" width="38" height="33" border="0" />
+			</a>
+			<a href="../../innerIndex.action?v=leg">			 				  
+			<img src="../../images/guide_ly.gif" alt="分眾導覽_委員" width="38" height="33" border="0" />
+			</a>
+			<a href="../../innerIndex.action?v=law">					 
+			<img src="../../images/guide_law.gif" alt="分眾導覽_議案" width="38" height="33" border="0" />
+			</a> 		
+				 
+		</form>
+	  <img src="../../images/spring/dep/title_member01.gif" alt="個人化服務" width="170" height="29"/>
+	  <div align="center" class="tab_style02">
+
+			<!-- 會員登入  -->
+			<form  action="https://wwwssl.ly.gov.tw:6443/memberLogin.action" name="form_member" id="form_member" method="post">
+<LABEL for="username" class="txt_white01">帳號:</LABEL><input name="username" type="text" class="input_style" id="uername" value="請輸入您的帳號" size="13" onclick="if(this.value=='請輸入您的帳號')this.value='';" onkeypress="if(this.value=='請輸入您的帳號')this.value='';" /><br />
+<LABEL for="password" class="txt_white01">密碼:</LABEL><input name="password" type="password" class="input_style" id="password" size="13" autocomplete="off" />
+<div align="center"><input name="button1" type="button" onclick="validateForm();" onkeypress="validateForm();" class="btn_style" value="登入" />
+<input name="button2" type="reset" class="btn_style" value="清除" /></div>
+</form>
+</div><div align="center" class="txt_white01">。<a title="加入會員" href="../../13_personnel/member/member_add.jsp">加入會員 </a>。<a title="忘記密碼" href="../../13_personnel/member/forgotPwd.action">忘記密碼</a></div>
+<div align="center" class="txt_white01">。<a title="個人化服務說明" href="../../13_personnel/member/member_explain.jsp">個人化服務說明</a></div>
+
+			</div>
+		
+				<div align="left"><img src="../../images/spring/dep/bg_bulletin04.gif" alt="*" width="175" height="6" /></div>
+				</td>
+  </tr>
+</table>
+                        <script type="text/javascript">
+								function validateForm(){
+									form = document.getElementById("form_member");
+									if(form.elements["username"].value=="" || form.elements["password"].value==""){
+										alert("請輸入帳號密碼");
+										return false;
+									}
+									else{
+										form.submit();
+									}
+								}
+                          </script>  
+	
+        	</td>
+                </tr>
+                <tr>
+                  <td colspan="2"><div style="font-size:95%"><span class="txt_white01"><a href="#" title="主要內容" accesskey="C">:::</a></span> <a href="../../index.jsp">首頁</a> <span class="link_grayline"> ></span> <span class="link_grayline"><a href="legList.action">立法委員&gt;</a> <!-- InstanceBeginEditable name="path" -->立法委員名單<!-- InstanceEndEditable --></span></div>
+                    <table width="99%" border="0" align="center" cellpadding="0" cellspacing="0" summary="排版用表格">
+                      <tr>
+                        <td class="contentbgtop01"><img src="../../images/contentbg_top01.jpg" alt="*" width="16" height="20" /></td>
+                        <td class="contentbgtop02"><img src="../../images/contentbg_top02.jpg" alt="*" width="20" height="20" /></td>
+                        <td class="contentbgtop03"><img src="../../images/contentbg_top03.jpg" alt="*" width="16" height="20" /></td>
+                      </tr>
+                      <tr>
+                        <td class="contentbgtop04">&nbsp;</td>
+                        <td><!-- InstanceBeginEditable name="content" -->
+                          <div class="page_content">
+                            <h3><img src="../../images/icon_title01.gif" alt="*" width="33" height="24" align="absbottom" />歷屆委員查詢</h3>
+                            
+                              <table width="95%" border="0" align="center" cellpadding="3" cellspacing="1">
+                                <tbody>
+                                  <tr>
+                                    <td width="100%" colspan="3" align="center">
+                                    <form id="legList" name="legList" action="/03_leg/0301_main/legList.action" method="post">
+
+                                    	<input type="hidden" name="queryFlag" value="true" id="legList_queryFlag"/>
+                                    	<tr><td width="50%"><label for="search_name">姓名搜尋：<input type="text" name="searchValues[0]" value="" id="searchValues[0]"/>
+
+</label></td>
+                                    		<td width="50%">&nbsp;</td>
+                                    	</tr>
+                                    	<tr>
+                                    	  <td>
+                                    	    <label for="search_Stage">屆別選區分類：
+                                        		<select name="searchValues[1]" id="searchValues[1]" onchange="ajaxArea(this.value,'null'),ajaxParty(this.value,'null'),ajaxPartyGroup(this.value,'null')">
+    <option value=""
+    >*請選擇屆別*</option>
+    <option value="8" selected="selected">8</option>
+    <option value="7">7</option>
+    <option value="6">6</option>
+    <option value="5">5</option>
+    <option value="4">4</option>
+    <option value="3">3</option>
+    <option value="2">2</option>
+    <option value="1">1</option>
+
+
+</select>
+
+
+
+
+                                        	</label>
+                                       		<select name="searchValues[2]" id="searchValues[2]">
+    <option value=""
+    selected="selected"
+    >*請選擇選區*</option>
+    <option value="001">台北市第1選舉區</option>
+    <option value="002">台北市第2選舉區</option>
+    <option value="003">台北市第3選舉區</option>
+    <option value="004">台北市第4選舉區</option>
+    <option value="005">台北市第5選舉區</option>
+    <option value="006">台北市第6選舉區</option>
+    <option value="007">台北市第7選舉區</option>
+    <option value="008">台北市第8選舉區</option>
+    <option value="100">基隆市選舉區</option>
+    <option value="300">宜蘭縣選舉區</option>
+    <option value="401">桃園縣第1選舉區</option>
+    <option value="402">桃園縣第2選舉區</option>
+    <option value="403">桃園縣第3選舉區</option>
+    <option value="404">桃園縣第4選舉區</option>
+    <option value="405">桃園縣第5選舉區</option>
+    <option value="406">桃園縣第6選舉區</option>
+    <option value="500">新竹市選舉區</option>
+    <option value="600">新竹縣選舉區</option>
+    <option value="701">苗栗縣第1選舉區</option>
+    <option value="702">苗栗縣第2選舉區</option>
+    <option value="801">台中市第1選舉區</option>
+    <option value="802">台中市第2選舉區</option>
+    <option value="803">台中市第3選舉區</option>
+    <option value="804">台中市第4選舉區</option>
+    <option value="805">台中市第5選舉區</option>
+    <option value="806">台中市第6選舉區</option>
+    <option value="807">台中市第7選舉區</option>
+    <option value="808">台中市第8選舉區</option>
+    <option value="A01">彰化縣第1選舉區</option>
+    <option value="A02">彰化縣第2選舉區</option>
+    <option value="A03">彰化縣第3選舉區</option>
+    <option value="A04">彰化縣第4選舉區</option>
+    <option value="B01">南投縣第1選舉區</option>
+    <option value="B02">南投縣第2選舉區</option>
+    <option value="C01">雲林縣第1選舉區</option>
+    <option value="C02">雲林縣第2選舉區</option>
+    <option value="D00">嘉義市選舉區</option>
+    <option value="E01">嘉義縣第1選舉區</option>
+    <option value="E02">嘉義縣第2選舉區</option>
+    <option value="F01">台南市第1選舉區</option>
+    <option value="F02">台南市第2選舉區</option>
+    <option value="F03">台南市第3選舉區</option>
+    <option value="F04">台南市第4選舉區</option>
+    <option value="F05">台南市第5選舉區</option>
+    <option value="H01">高雄市第1選舉區</option>
+    <option value="H02">高雄市第2選舉區</option>
+    <option value="H03">高雄市第3選舉區</option>
+    <option value="H04">高雄市第4選舉區</option>
+    <option value="H05">高雄市第5選舉區</option>
+    <option value="H06">高雄市第6選舉區</option>
+    <option value="H07">高雄市第7選舉區</option>
+    <option value="H08">高雄市第8選舉區</option>
+    <option value="H09">高雄市第9選舉區</option>
+    <option value="J01">屏東縣第1選舉區</option>
+    <option value="J02">屏東縣第2選舉區</option>
+    <option value="J03">屏東縣第3選舉區</option>
+    <option value="K00">台東縣選舉區</option>
+    <option value="L00">花蓮縣選舉區</option>
+    <option value="M00">澎湖縣選舉區</option>
+    <option value="N00">金門縣選舉區</option>
+    <option value="O00">連江縣選舉區</option>
+    <option value="V01">新北市第1選舉區</option>
+    <option value="V02">新北市第2選舉區</option>
+    <option value="V03">新北市第3選舉區</option>
+    <option value="V04">新北市第4選舉區</option>
+    <option value="V05">新北市第5選舉區</option>
+    <option value="V06">新北市第6選舉區</option>
+    <option value="V07">新北市第7選舉區</option>
+    <option value="V08">新北市第8選舉區</option>
+    <option value="V09">新北市第9選舉區</option>
+    <option value="V10">新北市第10選舉區</option>
+    <option value="V11">新北市第11選舉區</option>
+    <option value="V12">新北市第12選舉區</option>
+    <option value="X01">平地原住民</option>
+    <option value="X02">山地原住民</option>
+    <option value="Y00">全國不分區</option>
+    <option value="Z00">僑居國外國民</option>
+
+
+</select>
+
+
+
+
+				  		                  </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+											<label for="search_PARTY">黨籍分類：
+                                        		<select name="searchValues[3]" id="searchValues[3]">
+    <option value=""
+    selected="selected"
+    >*按黨籍分類*</option>
+    <option value="88">新國家陣線</option>
+    <option value="89">民主聯盟</option>
+    <option value="1">中國國民黨</option>
+    <option value="2">民主進步黨</option>
+    <option value="3">新黨</option>
+    <option value="4">建國黨</option>
+    <option value="99">無黨團結聯盟</option>
+    <option value="7">無黨籍</option>
+    <option value="8">親民黨</option>
+    <option value="50">台灣團結聯盟</option>
+    <option value="51">台灣吾黨</option>
+    <option value="1152">其他</option>
+
+
+</select>
+
+
+
+
+                                        	</label>
+                                          </td>
+                                        	<td>                                        	
+                                        	  <label for="search_group">黨團分類：
+                                        		  <select name="searchValues[4]" id="searchValues[4]">
+    <option value=""
+    selected="selected"
+    >*按黨團分類*</option>
+    <option value="1">中國國民黨</option>
+    <option value="2">民主進步黨</option>
+    <option value="3">新黨</option>
+    <option value="4">建國黨</option>
+    <option value="5">新國家陣線</option>
+    <option value="6">民主聯盟</option>
+    <option value="7">無</option>
+    <option value="8">親民黨</option>
+    <option value="9">超黨派問政聯盟</option>
+    <option value="50">台灣團結聯盟</option>
+    <option value="51">台灣吾黨</option>
+    <option value="72">無黨團結聯盟</option>
+    <option value="73">其他</option>
+
+
+</select>
+
+
+
+
+                                        	  </label>
+                                        	</td>
+                                        </tr>
+                                        <tr>
+                                        	<td width="50%"><label for="search_orderby">排序：<select name="searchValues[5]" id="searchValues[5]">
+    <option value="name" selected="selected">姓名</option>
+    <option value="lgno">編號</option>
+
+
+</select>
+
+
+
+
+												
+<input type="radio" name="searchValues[6]" id="legList_searchValues_6_asc" checked="checked" value="asc"/><label for="legList_searchValues_6_asc">遞增</label>
+<input type="radio" name="searchValues[6]" id="legList_searchValues_6_desc" value="desc"/><label for="legList_searchValues_6_desc">遞減</label>
+    
+
+
+
+											</label></td>
+                                        	<td width="50%"><input type="submit" id="legList_0" value="查詢"/>
+
+
+
+                                        		<input name="clean" type="button" onclick="ClearValue(this.form);" value="清除" />		           
+                                        	</td>
+                                        </tr>
+                                      </form>
+
+
+
+
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table><p></p>
+                              <div class="tr_line"></div>					
+                              <table width="95%" border="0" align="center" cellpadding="5" cellspacing="3">
+                                <tr>
+                                  <td><a href="../0302_report/query/statCommArea.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />以參與委員會查詢選區(黨籍、黨團)</a></td>
+                                  <td><a href="../0302_report/stat/statParty.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />黨籍人數統計表</a></td>
+                                  <td><a href="../0302_report/list/leaveList.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />任期中離職委員名單</a></td>
+                                </tr>
+                                <tr>
+                                  <td><a href="../0302_report/query/statArea.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />以選區(黨籍、黨團)查詢參與委員會</a></td>
+                                  <td><a href="../0302_report/stat/statPartyGroup.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />黨團人數統計表</a></td>
+                                  <td><a href="../0302_report/list/communicateList.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />委員通訊資料明細</a></td>
+                                </tr>
+                                <tr>
+                                  <td><a href="../0302_report/query/statSession.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />以會期查詢參與委員會名單</a></td>
+                                  <td><a href="../0302_report/list/fillVacancy.action"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />委員遞補情形表</a></td>
+                                </tr>
+                                <tr>
+                                  <td><a href="../../upload/01_introduce/0103_leg/other/stage_08_area_1030115.pdf" target="_blank" title="以新視窗開啟pdf檔案：公告第8 屆立法委員選舉之種類、名額、選舉區之劃分.pdf"><img src="../../images/icon_arrow02.gif" alt="*" width="22" height="10" border="0" />公告第8屆立法委員選舉之種類、名額、選舉區之劃分</a></td>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </table>
+                            <div class="tr_line"></div>
+                            
+                            <div class="leglist_newsbg"><div style="word-wrap: normal;word-break:break-all;word-wrap: break-word">&#26412;&#21312;&#22996;&#21729;&#20491;&#20154;&#31777;&#20171;&#36039;&#26009;&#30001;&#20154;&#20107;&#34389;&#32173;&#35703;&#65292;&#33509;&#26377;&#36039;&#26009;&#38656;&#20462;&#25913;&#65292;&#35531;&#33267;&#20840;&#29699;&#36039;&#35338;&#32178;\&#19968;&#33324;\&#26989;&#21209;&#36039;&#35338;\&#20154;&#20107;&#34389;\&#26989;&#21209;&#25104;&#26524;\&#31435;&#27861;&#22996;&#21729;&#26381;&#21209;&#21312;\&#19979;&#36617;&#31435;&#27861;&#38498;&#20840;&#29699;&#36039;&#35338;&#32178;&#65293;&#31435;&#27861;&#22996;&#21729;&#32178;&#38913;&#31777;&#20171;&#32173;&#35703;&#21934;&#65288;V200802-01&#65289;&#65292;&#22635;&#23531;&#24460;&#20659;&#30495;&#33267;&#20154;&#20107;&#34389;&#12290;<br><br>&#31532;&#19968;&#12289;&#20108;&#23622;&#31435;&#27861;&#22996;&#21729;&#36039;&#26009;&#35531;&#33267;&#26412;&#38498;&#22283;&#26371;&#22294;&#26360;&#39208;&#12304;&#27511;&#23622;&#22996;&#21729;&#12305;&#26597;&#35426;</div></div>
+                            
+                            <div align="left">查詢條件：<span class="leg03_txt_lightblue_03">
+                              
+                              &nbsp;
+                                
+                              	第 8屆 
+                              
+                               &nbsp;
+                              
+                              
+                                                            
+                              &nbsp;
+                              
+                              &nbsp;
+                              
+                              &nbsp;
+
+                              </span></div>
+							<div align="center"><input type="button" value="開新視窗列印本頁" onclick="openPrintWindow();" onkeypress="openPrintWindow();"/></div>
+                              <div class='leg03_titbg_02'><span class='leg03_titbg'>第8屆　立法委員名單</span></div>
+<table cellspacing='1' cellpadding='3' width='100%'><tbody><tr> 
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00001&stage=8'>丁守中</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00007&stage=8'>孔文吉</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00008&stage=8'>尤美女</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00003&stage=8'>王廷升</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00004&stage=8'>王育敏</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00002&stage=8'>王金平</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00006&stage=8'>王進士</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00005&stage=8'>王惠美</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00009&stage=8'>田秋堇</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00010&stage=8'>江啟臣</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00011&stage=8'>江惠貞</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00012&stage=8'>何欣純</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00015&stage=8'>吳宜臻</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00013&stage=8'>吳育仁</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00014&stage=8'>吳育昇</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00016&stage=8'>吳秉叡</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00017&stage=8'>呂玉玲</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00018&stage=8'>呂學樟</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00019&stage=8'>李昆澤</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00020&stage=8'>李俊俋</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00021&stage=8'>李桐豪</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00022&stage=8'>李貴敏</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00023&stage=8'>李慶華</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00024&stage=8'>李應元</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00025&stage=8'>李鴻鈞</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00037&stage=8'>邱文彥</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00038&stage=8'>邱志偉</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00039&stage=8'>邱議瑩</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00118&stage=8'>周倪安</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00026&stage=8'>林世嘉</a>
+<font color='red'>(離職)</font>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00027&stage=8'>林正二</a>
+<font color='red'>(離職)</font>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00028&stage=8'>林佳龍</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00029&stage=8'>林岱樺</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00030&stage=8'>林明溱</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00031&stage=8'>林郁方</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00032&stage=8'>林國正</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00033&stage=8'>林淑芬</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00034&stage=8'>林滄敏</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00035&stage=8'>林德福</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00036&stage=8'>林鴻池</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00040&stage=8'>姚文智</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00041&stage=8'>柯建銘</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00042&stage=8'>段宜康</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00043&stage=8'>洪秀柱</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00044&stage=8'>紀國棟</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00045&stage=8'>孫大千</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00046&stage=8'>徐少萍</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00047&stage=8'>徐欣瑩</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00048&stage=8'>徐耀昌</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00049&stage=8'>翁重鈞</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00059&stage=8'>陳其邁</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00115&stage=8'>陳怡潔</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00060&stage=8'>陳明文</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00061&stage=8'>陳亭妃</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00062&stage=8'>陳唐山</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00063&stage=8'>陳根德</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00064&stage=8'>陳淑慧</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00065&stage=8'>陳雪生</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00066&stage=8'>陳超明</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00067&stage=8'>陳節如</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00068&stage=8'>陳碧涵</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00069&stage=8'>陳歐珀</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00070&stage=8'>陳學聖</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00071&stage=8'>陳鎮湘</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00050&stage=8'>馬文君</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00051&stage=8'>高志鵬</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00052&stage=8'>高金素梅</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00053&stage=8'>張嘉郡</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00054&stage=8'>張慶忠</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00055&stage=8'>張曉風</a>
+<font color='red'>(離職)</font>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00056&stage=8'>許忠信</a>
+<font color='red'>(離職)</font>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00057&stage=8'>許添財</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00058&stage=8'>許智傑</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00072&stage=8'>曾巨威</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00083&stage=8'>葉宜津</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00116&stage=8'>葉津鈴</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00073&stage=8'>費鴻泰</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00074&stage=8'>黃文玲</a>
+<font color='red'>(離職)</font>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00075&stage=8'>黃志雄</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00076&stage=8'>黃昭順</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00077&stage=8'>黃偉哲</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00078&stage=8'>楊玉欣</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00079&stage=8'>楊應雄</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00080&stage=8'>楊曜</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00081&stage=8'>楊瓊瓔</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00082&stage=8'>楊麗環</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00084&stage=8'>詹凱臣</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00085&stage=8'>廖正井</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00086&stage=8'>廖國棟</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00087&stage=8'>管碧玲</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00094&stage=8'>蔡正元</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00095&stage=8'>蔡其昌</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00096&stage=8'>蔡煌瑯</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00097&stage=8'>蔡錦隆</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00093&stage=8'>蔣乃辛</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00088&stage=8'>趙天麟</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00098&stage=8'>鄭天財<br>Sra．Kacaw</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00099&stage=8'>鄭汝芬</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00100&stage=8'>鄭麗君</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00089&stage=8'>劉建國</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00090&stage=8'>劉櫂豪</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00091&stage=8'>潘孟安</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00092&stage=8'>潘維剛</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00101&stage=8'>盧秀燕</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00102&stage=8'>盧嘉辰</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00103&stage=8'>蕭美琴</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00105&stage=8'>薛凌</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00104&stage=8'>賴士葆</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00117&stage=8'>賴振昌</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00106&stage=8'>謝國樑</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00109&stage=8'>魏明谷</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00107&stage=8'>簡東明</a>
+</td>
+</tr>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00108&stage=8'>顏清標</a>
+<font color='red'>(離職)</font>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00114&stage=8'>顏寬恒</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00110&stage=8'>羅明才</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00111&stage=8'>羅淑蕾</a>
+</td>
+<td width='12%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00112&stage=8'>蘇清泉</a>
+</td>
+<td width='13%' class='leg03_news_search_03'><a href='/03_leg/0301_main/legIntro.action?lgno=00113&stage=8'>蘇震清</a>
+</td>
+</tr></tbody></table> 
+<div align='right' class='txt'>查詢結果共118位委員</div>
+<div class='leg03_titbg_02_dis'><span class='leg03_titbg_dis'>中途離職委員</span></div><ul>
+<li class='leg03_dis_name'><a href='/03_leg/0301_main/legIntro.action?lgno=00056&stage=8'>許忠信</a>　離職日期：2014/02/01
+&nbsp;備註 :辭職。
+</li>
+<li class='leg03_dis_name'><a href='/03_leg/0301_main/legIntro.action?lgno=00074&stage=8'>黃文玲</a>　離職日期：2014/02/01
+&nbsp;備註 :辭職。
+</li>
+<li class='leg03_dis_name'><a href='/03_leg/0301_main/legIntro.action?lgno=00026&stage=8'>林世嘉</a>　離職日期：2013/07/15
+&nbsp;備註 :因喪失其所屬台灣團結聯盟黨籍，本院於102年7月15日起註銷名籍。
+</li>
+<li class='leg03_dis_name'><a href='/03_leg/0301_main/legIntro.action?lgno=00027&stage=8'>林正二</a>　離職日期：2013/07/11
+&nbsp;備註 :因案於102年07月11日經最高法院判決褫奪公權確定，並自判決確定之日起，註銷名籍。親民黨黨團人數已不足本院組織法第33條規定組成黨團之人數。
+</li>
+<li class='leg03_dis_name'><a href='/03_leg/0301_main/legIntro.action?lgno=00055&stage=8'>張曉風</a>　離職日期：2013/03/17
+&nbsp;備註 :辭職。
+</li>
+<li class='leg03_dis_name'><a href='/03_leg/0301_main/legIntro.action?lgno=00108&stage=8'>顏清標</a>　離職日期：2012/11/28
+&nbsp;備註 :因案於101年11月28日經最高法院判決褫奪公權確定，並自判決確定之日起，註銷名籍。
+</li>
+</ul><div align='right' class='txt'>查詢結果共6位委員</div> 
+
+                              
+                </div>
+                          <!-- InstanceEndEditable --> </td>
+                        <td class="contentbgtop06">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td valign="top"><img src="../../images/contentbg_top07.jpg" alt="" width="16" height="20" /></td>
+                        <td background="../../images/contentbg_top08.jpg">&nbsp;</td>
+                        <td valign="top"><img src="../../images/contentbg_top09.jpg" alt="" width="16" height="20" /></td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </tbody>
+            </table>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+
+
+
+
+
+<div class="bt">
+<span class="summer_ink_blue">
+	<a href="#"title="下方版權宣告區塊" accesskey="B">:::</a>
+</span>
+<div id="side"> <span class="txt_black">立法院　10051 台北市中正區中山南路1號　電話：(02)2358-5858<br />
+  立法院中部辦公室　41341 台中市霧峰區中正路734號<br />
+  <a href="../../07_misc/location.jsp">交通位置圖</a>│<a href="http://w2.ly.gov.tw/ly/vrlab/index.htm" target="_blank" title="立法院3D導覽(另開新視窗)">立法院3D導覽</a></span></div>
+<div id="content">
+<span class="txt_black">Copyright © 2010 立法院版權所有<br /> 
+<img src="../../images/png 09.gif" alt="網站安全政策" width="25" height="21" align="absmiddle" /><a href="../../14_others/policy_security02.jsp">資訊安全政策</a>│<img src="../../images/png 11.gif" alt="隱私權政策" width="25" height="21" align="absmiddle" /><a href="../../14_others/policy_security01.jsp">隱私權政策</a>│<a href="../../14_others/copyright.jsp">著作權聲明</a>　<br />
+建議最佳瀏覽環境：IE7.0 &amp; FireFox  1024x768以上模式</span>
+</div>
+<div id="rPanel">
+	<a href="http://www.gov.tw/" target="_blank">
+	<img src="../../images/gov.gif" alt="我的政府(另開新視窗)" width="43" height="45" border="0" align="texttop" /></a>　
+	<a href="http://www.webguide.nat.gov.tw/enable.jsp?category=20051109141915" target="_blank">
+	<img src="../../images/aa.gif" alt="通過AA等級無障礙網頁檢測(另開新視窗)" width="88" height="31" border="0" align="texttop" /></a></div>
+</div>
+<!-------1------->
+<script language="JavaScript">
+function openPrintWindow(){
+	var url = "legListPrint.action?searchValues%5B0%5D=&searchValues%5B1%5D=8&searchValues%5B2%5D=&searchValues%5B3%5D=&searchValues%5B4%5D=&searchValues%5B5%5D=name&searchValues%5B6%5D=asc";
+
+	window.open(url,'列印立法委員名單','width=650,height=495,scrollbars=yes,resizable=yes');
+
+}
+
+/**Start--Initial searchValues[2]、searchValues[3]、searchValues[4] elements.Added by James Sie.*/
+ajaxArea('8','');
+ajaxParty('8','');
+ajaxPartyGroup('8','');
+/**End--Initial searchValues[2]、searchValues[3]、searchValues[4] elements.Added by James Sie.*/
+</script>
+</body>
+<!-- InstanceEnd -->
+</html>

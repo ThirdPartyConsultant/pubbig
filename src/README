@@ -1,3 +1,16 @@
 
 source code structure
 
+\src\data_tool  (a few manually execution tools)
+\src\backend (server side)
+\src\www     (front end)
+\src\initial_data (initial data)
+\src\conf (configuration)
+
+Major data source:
+(1) http://www.ly.gov.tw/innerIndex.action
+(2) http://sunshine.cy.gov.tw
+(3)
+
+
+
