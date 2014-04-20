@@ -100,6 +100,7 @@ def retrieve_info(sunshine_file, is_run_once=True):
     flag = None # possible flag None, 'in', sections key name
     one_form = {}
     people_count = 0
+    extra_count =0
     for line in f:
         if flag == None:
             for form_start_key in form_start:
@@ -118,15 +119,38 @@ def retrieve_info(sunshine_file, is_run_once=True):
                 print "leave an ignore form"
             continue
 
+        if flag == 'extra_meta_name' :
+            line = line.strip().replace(' ','')
+            if extra_count >= 3:
+                flag = None
+                print "leave extra count but no meta_name..."
+
+            if line.count(u'申報人') >= 1:
+                flag = None # means leave an ignore form
+                print "leave extra count"
+                one_form[u'姓名'] = line.replace(u'申報人','')           
+                dump_form(one_form)
+                people_count += 1
+            else:
+                extra_count += 1
+
+            continue
+
         if flag != None:
             for form_end_key in form_end:
                 if line.count(form_end_key) == 1:
                     print "=== form end ==="
                     flag = None # means a new form
-                    dump_form(one_form)
-                    people_count += 1
-                    flag = None
+                    if one_form.has_key(u'姓名') and one_form[u'姓名'].strip !="" :
+                        dump_form(one_form)
+                        people_count += 1
+                        flag = None
+                    else: # do search extra 3 lines
+                        flag = 'extra_meta_name'
+                        extra_count == 0
                     break
+
+
             if flag == None and is_run_once:
                 break
 
