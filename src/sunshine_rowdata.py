@@ -69,11 +69,13 @@ def dump_form(one_form):
 
 
 def retrieve_info(sunshine_file, is_run_once=True):
+    ignore_start = u'選舉擬參選人' 
+    ignore_end = u'上表逕依申報人所載資料公告'
     form_start = [u'公職人員財產申報表', 
                   u'公職人員信託財產申報表',
-                  u'公職人員變動財產申報表' ]
+                  u'公職人員變動財產申報表']
     form_end = [u'願負法律責任',u'特此聲明',u'本人係依法誠實申']
-    meta_name = u'申報人姓名'
+    meta_name = [u'申報人姓名',u'擬參選人：']
     meta_org =  u'服務機關'
     meta_date = u'申報日'
     section_orders = [u'存款',u'有價證券',u'.土地',u'.建物',u'外幣',u'債權',u'債務',u'事業投資',u'其他具有相當價值之財產',u'汽',u'其他財產',u'船舶',u'航空器']
@@ -106,6 +108,15 @@ def retrieve_info(sunshine_file, is_run_once=True):
                     flag = 'in' # means a new form
                     one_form = {}
                     break
+            if line.count(ignore_start) >= 1:
+                flag = 'ignore' # means an ignore form
+                one_form = {}
+
+        if flag == 'ignore' :
+            if line.count(ignore_end) >= 1:
+                flag = None # means leave an ignore form
+                print "leave an ignore form"
+            continue
 
         if flag != None:
             for form_end_key in form_end:
@@ -119,10 +130,18 @@ def retrieve_info(sunshine_file, is_run_once=True):
             if flag == None and is_run_once:
                 break
 
-            if line.count(meta_name) == 1:
-                flag = 'meta_name'
-                parts = line.split(" ")
-                one_form[u'姓名'] = parts[1]
+            for possible_name in meta_name:
+                if line.count(possible_name) == 1 :
+                    tmp_name = ""
+                    if line.count(u'：') >= 1:
+                        parts = line.split(u'：')
+                        tmp_name = parts[1]
+                    else:
+                        parts = line.split(" ")
+                        tmp_name = parts[1]
+                    flag = 'meta_name'
+                    one_form[u'姓名'] = tmp_name
+                    break
 
             if line.count(meta_org) == 1:
                 flag = 'meta_org'
