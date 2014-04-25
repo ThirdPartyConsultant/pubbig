@@ -28,20 +28,20 @@ class DAMongoDB:
 if __name__ == '__main__':
     dataAccess = DAMongoDB("TheBoss","person")
     
-#    test_service = {"name":"test_service","desc":"test service description"}
-#    test_service2 = {"name":"test_service","desc":"test service description22"}
-#    objId_insert = dataAccess.insert(test_service)
-#    objId_insert = dataAccess.insert(test_service2)
+    test_service = {"name":"test_service","desc":"test service description"}
+    test_service2 = {"name":"test_service","desc":"test service description22"}
+    objId_insert = dataAccess.insert(test_service)
+    objId_insert = dataAccess.insert(test_service2)
     objId_list = dataAccess.select({"service":"rest1","sid":"JU7q1QnK"})
     print objId_list
     tobe = {'status': 'serving'}
     for i in objId_list:
         dataAccess.update({"service":"rest1","sid":"JU7q1QnK"},{"$set":tobe})
-#        dataAccess.delete(i)
+        dataAccess.delete(i)
 
     objId_list = dataAccess.select({"service":"rest1"})
     for i in objId_list:
         print i
 
- #   not_exist_obj = dataAccess.select({"name":"rest1"})
- #   print not_exist_obj.count()
+    not_exist_obj = dataAccess.select({"name":"rest1"})
+    print not_exist_obj.count()
