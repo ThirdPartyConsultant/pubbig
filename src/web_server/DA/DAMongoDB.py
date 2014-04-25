@@ -1,13 +1,13 @@
 #from pymongo import Connection # Deprecated
 from pymongo import MongoClient
 
-class DataAccess:
+class DAMongoDB:
     def __init__(self,dbName,collectionName):
         self.host = 'localhost'
         self.port = 27017
         #self.connection = Connection(self.host, self.port)
         self.client = MongoClient(self.host, self.port)
-        self.db = self.connection[dbName]
+        self.db = self.client[dbName]
         self.collection = self.db[collectionName]
                         
     def insert(self, obj):
@@ -26,7 +26,7 @@ class DataAccess:
 
 
 if __name__ == '__main__':
-    dataAccess = DataAccess("TheBoss","person")
+    dataAccess = DAMongoDB("TheBoss","person")
     
 #    test_service = {"name":"test_service","desc":"test service description"}
 #    test_service2 = {"name":"test_service","desc":"test service description22"}
