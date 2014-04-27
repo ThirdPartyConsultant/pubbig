@@ -7,8 +7,11 @@ from BeautifulSoup import BeautifulSoup as Soup
 from io import open
 import sys
 import getopt
+sys.path.append('web_server/DA')
 reload(sys)
 sys.setdefaultencoding("utf-8")
+from DAMongoDB import DAMongoDB
+from DACouchDB import DACouchDB
 
 
 def _add_array_item(adict, key, value):
@@ -67,6 +70,9 @@ def dump_form(one_form):
         else:
             print "---> " + str(value)
 
+    DataAccess = DACouchDB('sunshine','person')
+    obj  =  DataAccess.insert(one_form)
+    print obj
 
 def retrieve_info(sunshine_file, is_run_once=True):
     ignore_start = u'選舉擬參選人' 
