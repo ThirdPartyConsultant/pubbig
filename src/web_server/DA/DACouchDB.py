@@ -32,6 +32,9 @@ class DACouchDB:
     def select(self, objId):
         return self.db.get(objId)
 
+    def query(self, map_fun,key=None):
+        return self.db.query(map_fun, key=key)
+
     def update(self, oriObj, newObj ):
         self.db.update([oriObj])
 
@@ -40,7 +43,7 @@ if __name__ == '__main__':
 
     dataAccess = DACouchDB('boss',"person")
     testdoc = {u'姓名':u'馬小九', 'name':u'馬小酒', 'tel':['23939889','020020202','02020202020'] }
-    testdoc2 = {u'姓名':u'馬小九', 'name':u'馬小酒', 'tel':['23939889','020020202','02020202020'] }
+    testdoc2 = {u'姓名':u'馬小九', 'name':u'馬小久', 'tel':['23939889','020020202','02020202020'] }
     objId = dataAccess.insert(obj=testdoc)
     print "new doc id: "+ str(objId)
     
@@ -65,5 +68,14 @@ if __name__ == '__main__':
     doc = dataAccess.select(objId)
     print "select again the update result..."
     print doc
+
+    map_fun = ''' function(doc){ 
+        emit(doc.name ,doc);
+    } 
+   '''
+    results = dataAccess.query(map_fun, key=u'馬小久')
+    for i in results:
+        print i.key
+
     print "delete again the doc ... "
     doc = dataAccess.delete(doc)  
