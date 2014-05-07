@@ -1,0 +1,2 @@
+
+curl  --header "Content-Type: application/json" -vX POST http://172.16.32.128:5984/_replicate  --data  '{"source":"sunshine", "target":"http://10.1.193.180:5984/sunshine"}'
