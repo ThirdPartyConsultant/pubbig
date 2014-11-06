@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-. 
 from BeautifulSoup import BeautifulSoup as soup
 from io import open
-import pymongo
+#import pymongo
 import commands
 import json
 import sys
@@ -71,11 +71,11 @@ for i in range(2,9):
 
 
 print legislator
-mongo_connection = pymongo.Connection('localhost',27017)
-mongo_legislator_db = mongo_connection['legislator_db']
+#mongo_connection = pymongo.Connection('localhost',27017)
+#mongo_legislator_db = mongo_connection['legislator_db']
 
-collection_legislator_list = mongo_legislator_db['legislator_list']
-collection_legislator_list.insert(legislator)
+#collection_legislator_list = mongo_legislator_db['legislator_list']
+#collection_legislator_list.insert(legislator)
 
 
 #Insert in to mongodb 

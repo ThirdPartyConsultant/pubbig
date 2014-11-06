@@ -8,9 +8,11 @@ source code structure
 \src\conf (configuration)
 
 Major data source:
-(1) http://www.ly.gov.tw/innerIndex.action
-(2) http://sunshine.cy.gov.tw
-(3)
+(1) http://sunshine.cy.gov.tw/GipOpenWeb/wSite/lp?ctNode=442&mp=2&nowPage=1&pagesize=300 <-- all public report list, PDF list.
+(2)  row_data/list_of_report_html (2014/Nov/6 list all report)
+(3) wget list to row_data/pdf
+(3) pdftotext f1389162854145.pdf text_pdftotext
+
 
 
 

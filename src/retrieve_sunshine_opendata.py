@@ -2,7 +2,6 @@
 
 from BeautifulSoup import BeautifulSoup as soup
 from io import open
-import pymongo
 import commands
 import json
 import sys
@@ -38,5 +37,5 @@ def wget_pdf(atag):
 
 
 
-build_metadata("sunshine_open_data_list2.htm")
+build_metadata(sys.argv[1])
 
