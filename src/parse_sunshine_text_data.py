@@ -19,11 +19,26 @@ class MyPrettyPrinter(pprint.PrettyPrinter):
             return (object.encode('utf8'), True, False)
         return pprint.PrettyPrinter.format(self, object, context, maxlevels, level)
 
+def post_process_form(aform):
+    if(aform[u'姓名'] == u''):
+        for elem in aform['source'][u'text']:
+            if elem.startswith(u'申報人：') or elem.startswith(u'申報人:'):
+                possibleName = elem.split(":")[-1].split(u'：')[-1]
+                aform[u'姓名'] = possibleName
+                break
 
+    #adjust URL to site site="http://sunshine.cy.gov.tw/GipOpenWeb/wSite/"
+    site="http://sunshine.cy.gov.tw/GipOpenWeb/wSite/public/Attachment/"
+    url = aform['source']['url']
+    url = url.replace("row_data/text/","").replace(".txt","")
+    url = site+url
+    aform['source']['url'] = url
 
 def dump_form(aform):
-    if(aform[u'姓名'] == u''):
-        MyPrettyPrinter().pprint(aform)  
+    post_process_form(aform)
+    MyPrettyPrinter().pprint(aform)  
+   # if(aform[u'姓名'] == u''):
+   #     MyPrettyPrinter().pprint(aform)  
 
 def retrieve_info(sunshine_file, is_run_once=True):
     ignore_start = u'選舉擬參選人' 
@@ -31,7 +46,7 @@ def retrieve_info(sunshine_file, is_run_once=True):
     form_start = [u'公職人員財產申報表', u'申報人姓名',
                   u'公職人員信託財產申報表',
                   u'公職人員變動財產申報表']
-    form_end = [u'願負法律責任',u'申報人:',u'特此聲明',u'本人係依法誠實申',u'申報人：']
+    form_end = [u'申報人:',u'申報人：']
     meta_name = [u'申報人姓名',u'擬參選人：']
     
     result = {}
@@ -49,13 +64,16 @@ def retrieve_info(sunshine_file, is_run_once=True):
                     print "=== form start ===" + form_start_key
                     flag = 'in' # means a new form
                     one_form = {}
-                    one_form['text'] = []
+                    one_form['source'] = {}
+                    one_form['source']['url'] = sunshine_file
+                    one_form['source']['text'] = []
+
                     break
             if line.count(ignore_start) >= 1:
                 flag = 'ignore' # means an ignore form
                 one_form = {}
         if flag == 'in' and len(line)>=3:
-            one_form['text'].append(line)
+            one_form['source']['text'].append(line)
 
         if flag == 'ignore' :
             if line.count(ignore_end) >= 1:
