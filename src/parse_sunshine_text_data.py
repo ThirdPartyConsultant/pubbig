@@ -25,7 +25,7 @@ class MyPrettyPrinter(pprint.PrettyPrinter):
 
 
 def addToCouchbase(key, doc):
-    couchbucket = Couchbase.connect(bucket='sunshine', host='localhost')
+    couchbucket = Couchbase.connect(bucket='sunshine2', host='localhost')
     ruuid = str(uuid.uuid4())
     couchbucket.set(key+ruuid,doc);
 
@@ -54,7 +54,15 @@ def post_process_form(aform):
 def dump_form(aform):
     post_process_form(aform)
     akey = aform['source']['title']+u':'+aform[u'姓名']
-    addToCouchbase(akey, aform)
+    for tag in aform['source']['text'] :
+        shortform = {}
+        shortform['source'] = aform['source']['url']   
+        shortform['title'] = aform['source']['title']   
+        shortform['name'] =aform[u'姓名']
+        shortform['tag'] = tag
+        addToCouchbase(akey, shortform)
+ 
+    #addToCouchbase(akey, aform)
     # MyPrettyPrinter().pprint(aform)  
    # if(aform[u'姓名'] == u''):
    #     MyPrettyPrinter().pprint(aform)  
