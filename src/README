@@ -10,8 +10,10 @@ source code structure
 Major data source:
 (1) http://sunshine.cy.gov.tw/GipOpenWeb/wSite/lp?ctNode=442&mp=2&nowPage=1&pagesize=300 <-- all public report list, PDF list.
 (2)  row_data/list_of_report_html (2014/Nov/6 list all report)
-(3) wget list to row_data/pdf
-(3) pdftotext f1389162854145.pdf text_pdftotext
+(3) python retrieve_sunshine_opendata.py row_data/list_of_report_part.html (retrieve currently all sunshine report)
+    [TODO: a document to trace the original report link and title)
+(4) pdftotext f1389162854145.pdf f1389162854145.pdf.txt
+(5) parse to couchbase : python parse_sunshine_text_data.py  row_data/text/f1413442283839.pdf.txt
 
 
 
